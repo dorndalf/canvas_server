@@ -14,6 +14,8 @@ const io = require("socket.io")(http, {
   },
 });
 
+app.get("/", function (req, res) {});
+
 io.on("connection", function (socket3) {
   io.engine === io.eio;
   serverClients = Object.keys(io.engine.clients); //schreibt bei jedem join auf server die Verbundenen Sockets in ein Array
