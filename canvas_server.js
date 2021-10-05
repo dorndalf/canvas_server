@@ -2,7 +2,12 @@ var app = require("express")();
 var http = require("http").Server(app);
 var io = require("socket.io")(http, {
   cors: {
-    origin: ["http://localhost:3000", "https://hatespeech-canvas.onrender.com"],
+    origin: [
+      "http://localhost:3000/form",
+      "http://localhost:3000",
+      "https://hatespeech-canvas.onrender.com",
+      "https://hatespeech-canvas.onrender.com/form",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },
