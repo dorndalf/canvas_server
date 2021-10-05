@@ -1,5 +1,4 @@
-import { Server } from "socket.io";
-
+const { Server } = require("socket.io");
 const http = require("http").Server(app);
 const port = process.env.PORT || 1333;
 const io = new Server({
