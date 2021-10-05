@@ -1,6 +1,7 @@
-var app = require("express")();
-var http = require("http").Server(app);
-var io = require("socket.io")(http, {
+const app = require("express")();
+const http = require("http").Server(app);
+const port = process.env.PORT || 1333;
+const io = require("socket.io")(http, {
   cors: {
     origin: [
       "http://localhost:3000/form",
@@ -27,6 +28,6 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(1333, function () {
-  console.log("listening on *:1333");
+http.listen(port, function () {
+  console.log(`listening on port *${port}`);
 });
