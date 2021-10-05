@@ -1,9 +1,10 @@
 {
-  "name": "semesterprojekt",
+  "name": "canvas_server.js",
   "version": "1.0.0",
   "description": "",
   "main": "canvas_server.js",
   "scripts": {
+    "start": "node canvas_server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
