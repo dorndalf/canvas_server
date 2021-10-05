@@ -1,6 +1,6 @@
 const { Server } = require("socket.io");
-const port = process.env.PORT || 1333;
-const io = new Server({
+const port = process.env.PORT || 8080;
+const io = new Server(port, {
   cors: {
     origin: [
       "*",
@@ -24,5 +24,3 @@ io.on("connection", (socket) => {
     console.log(message);
   });
 });
-
-io.listen(port);
