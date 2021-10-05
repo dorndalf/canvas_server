@@ -10,7 +10,6 @@ const io = require("socket.io")(http, {
       "https://hatespeech-canvas.onrender.com/form",
     ],
     methods: ["GET", "POST"],
-    credentials: true,
   },
 });
 
