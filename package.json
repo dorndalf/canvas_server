@@ -1,7 +1,11 @@
 {
   "name": "canvas_server.js",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "node": "v12.16.1",
+    "npm": "6.13.4"
+  },
+  "description": "Server for our messaging app",
   "main": "canvas_server.js",
   "scripts": {
     "start": "node canvas_server.js",
