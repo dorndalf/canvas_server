@@ -4,6 +4,7 @@ const port = process.env.PORT || 1333;
 const io = require("socket.io")(http, {
   cors: {
     origin: [
+      "*",
       "http://localhost:3000/form",
       "http://localhost:3000",
       "https://hatespeech-canvas.onrender.com",
