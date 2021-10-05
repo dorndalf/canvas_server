@@ -1,7 +1,8 @@
-const app = require("express")();
+import { Server } from "socket.io";
+
 const http = require("http").Server(app);
 const port = process.env.PORT || 1333;
-const io = require("socket.io")(http, {
+const io = new Server({
   cors: {
     origin: [
       "*",
@@ -13,10 +14,20 @@ const io = require("socket.io")(http, {
     methods: ["GET", "POST"],
   },
 });
+// const io = require("socket.io")(http, {
+//   cors: {
+//     origin: [
+//       "*",
+//       "http://localhost:3000/form",
+//       "http://localhost:3000",
+//       "https://hatespeech-canvas.onrender.com",
+//       "https://hatespeech-canvas.onrender.com/form",
+//     ],
+//     methods: ["GET", "POST"],
+//   },
+// });
 
-app.get("/", function (req, res) {});
-
-io.on("connection", function (socket3) {
+io.on("connection", (socket) => {
   io.engine === io.eio;
   serverClients = Object.keys(io.engine.clients); //schreibt bei jedem join auf server die Verbundenen Sockets in ein Array
 });
@@ -30,6 +41,6 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(port, function () {
+io.listen(port, () => {
   console.log(`listening on port *${port}`);
 });
