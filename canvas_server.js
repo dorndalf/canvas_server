@@ -16,9 +16,6 @@ const io = new Server(port, {
 io.on("connection", (socket) => {
   io.engine === io.eio;
   const serverClients = Object.keys(io.engine.clients); //schreibt bei jedem join auf server die Verbundenen Sockets in ein Array
-});
-
-io.on("connection", (socket) => {
   socket.on("message", (message) => {
     io.emit("newMessage", message); //gibt aus dass wort richtig war
     console.log(message);
