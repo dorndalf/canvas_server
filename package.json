@@ -5,7 +5,7 @@
     "node": "v12.16.1",
     "npm": "6.13.4"
   },
-  "description": "Server for our messaging app",
+  "description": "Server for our messaging",
   "main": "canvas_server.js",
   "scripts": {
     "start": "node canvas_server.js",
@@ -15,6 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^4.2.0"
   }
 }
