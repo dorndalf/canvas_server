@@ -4,7 +4,7 @@ const io = new Server(port, {
   cors: {
     origin: [
       "*",
-      "https://twobaloons.online/",
+      "https://www.twobaloons.online",
       "http://localhost:3000/form",
       "http://localhost:3000",
       "https://hatespeech-canvas.onrender.com",
