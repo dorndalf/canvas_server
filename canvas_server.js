@@ -5,7 +5,9 @@ const io = new Server(port, {
     origin: [
       "*",
       "https://www.twobaloons.online",
+      "https://www.twobaloons.online/config",
       "http://localhost:3000/form",
+      "http://localhost:3000/config",
       "http://localhost:3000",
       "https://hatespeech-canvas.onrender.com",
       "https://hatespeech-canvas.onrender.com/form",
@@ -16,9 +18,10 @@ const io = new Server(port, {
 
 io.on("connection", (socket) => {
   io.engine === io.eio;
-  const serverClients = Object.keys(io.engine.clients); //schreibt bei jedem join auf server die Verbundenen Sockets in ein Array
   socket.on("message", (message) => {
-    io.emit("newMessage", message); //gibt aus dass wort richtig war
-    console.log(message);
+    io.emit("newMessage", message);
+  });
+  socket.on("sleep", (toggle) => {
+    io.emit("sleep", toggle);
   });
 });
